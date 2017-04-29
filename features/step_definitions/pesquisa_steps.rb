@@ -16,10 +16,15 @@ end
 
 E(/^clicar no botão de adicionar ao carrinho$/) do
   find(:css, '.button-success.button-pill.right.buy-button.buy-button-product.fluid').click
+  @produto = all(:css, '.product-name')[0].text
   click_button 'navegaCarrinho'
 end
 
 Então(/^verificar se o item foi adiconado ao carrinho$/) do
   find(:css, '.topbar-buttons.open-link.cart-link').click
-  expect(page).to have_content 'Meu carrinho (1 item)'
+  if (expect(page).to have_content @produto)
+    puts 'Produto adicionado ao carrinho com sucesso'
+  else
+    puts 'Erro ao adicionar produto'
+  end
 end
