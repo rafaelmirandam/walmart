@@ -24,7 +24,5 @@ Então(/^verificar se o item foi adiconado ao carrinho$/) do
   find(:css, '.topbar-buttons.open-link.cart-link').click
   if (expect(page).to have_content @produto)
     puts 'Produto adicionado ao carrinho com sucesso'
-  else
-    puts 'Erro ao adicionar produto'
   end
 end
