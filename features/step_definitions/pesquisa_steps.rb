@@ -17,7 +17,7 @@ end
 E(/^clicar no botão de adicionar ao carrinho$/) do
   find(:css, '.button-success.button-pill.right.buy-button.buy-button-product.fluid').click
   @produto = all(:css, '.product-name')[0].text
-  click_button 'navegaCarrinho'
+  #click_button 'navegaCarrinho' #modal de extensão da garantia
 end
 
 Então(/^verificar se o item foi adiconado ao carrinho$/) do
