@@ -1,3 +1,4 @@
+#encoding: utf-8
 Dado(/^que eu estou na página inicial do Walmart$/) do
   visit '/'
 end

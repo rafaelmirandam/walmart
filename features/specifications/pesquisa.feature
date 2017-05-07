@@ -1,5 +1,5 @@
 #language: pt
-
+#encoding: utf-8
 Funcionalidade: Pesquisa de produto no Walmart e depois adicionar ao carrinho
 
   Cenário: Fazer uma pesquisa na página inicial do walmart e depois adicionar um item no carrinho
